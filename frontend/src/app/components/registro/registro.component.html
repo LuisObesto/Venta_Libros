@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class ="col-6 mt-3" >
+            <form [formGroup]="form" (ngSubmit)="registro()" *ngIf="isLoaded">
+                <div class="form-group mt-3">
+                    <div class="form-group mt-3">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre" class="form-control">
+                    </div>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" formControlName="apellido" placeholder="Apellido" class="form-control">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="mail">Email</label>
+                    <input type="text" id="mail" formControlName="mail" placeholder="...@example.com" class="form-control">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" formControlName="usuario" placeholder="usuario" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" formControlName="contraseña" placeholder ="********" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block margin">Ingresar</button>
+
+            </form>
+        </div>
+    </div>
+</div>

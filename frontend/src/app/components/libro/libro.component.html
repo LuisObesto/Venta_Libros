@@ -1,0 +1,44 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-4">
+
+            <img src="./../../../assets/img/{{libro.img}}" style="width: 70%; height: auto;" alt=" ">
+
+        </div>
+        <div class="ml-2 col-7">
+                <div class="row">
+                    <div class="col-7" style="font-family: 'Roboto Condensed', sans-serif;">
+                        <h1>{{libro.nombre}}</h1>
+                      
+                        <button type="button" class="boton_incremento" (click)="variarContador('sumar')">+</button>
+                        {{contador}}
+                        <button type="button" class="boton_incremento" (click)="variarContador('restar')">-</button>
+                        <br>
+                        <br>
+                        <div >
+                            <div class="separador">
+                                <h2>$ {{libro.Precio}}</h2>
+                                <button type ="button" class="boton_comprar" (click)="AgregarCarrito()">Comprar</button>
+                            </div>
+                         </div>
+                        <br>
+                        
+                        <h6>Fecha Publicacion :{{libro.Fecha_Publicacion}}</h6>
+                        <h6>Autor {{libro.Autor}}</h6>
+                        <h6>Editorial {{libro.Editorial}}</h6>
+                        <h6>Idioma :{{libro.Idioma}}</h6>
+                        <h6>Paginas :{{libro.Paginas}}</h6>
+ 
+                    </div>
+                    
+                </div>
+                
+        </div>
+        <div class="row">
+            <div class="mb-5">
+                <h3 style="text-align-last: center;">Descripcion</h3>
+                <h5 style="font-family: 'Roboto Condensed', sans-serif;">{{libro.Prologo}}</h5>
+            </div>  
+        </div>
+    </div>
+</div>

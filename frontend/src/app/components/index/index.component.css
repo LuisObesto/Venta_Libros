@@ -1,0 +1,24 @@
+.carousel-item {
+    height: 100%;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .contenedor{
+    height: 65vh;
+  }
+
+  .card-img-top {
+    width: 70%;
+    height: 100%; 
+    object-fit: cover;
+    padding-bottom: 0.5rem;
+  }
+
+  .padre{
+    background: linear-gradient(90deg, rgba(63,204,232,0.5942752100840336) 19%, rgba(187,211,214,1) 100%);
+  }

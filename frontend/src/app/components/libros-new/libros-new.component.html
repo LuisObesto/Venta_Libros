@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6 ">
+                <h4 class="mt-5">Alta de Libros</h4>
+            <form [formGroup]="form">
+                <div class="form-group">
+                    <label form="nombre">Nombre *</label>
+                    <input type="text" id="nombre" class="form-control" formControlName="nombre" placeholder="Nombre" />
+                    <span class="text-center text-danger" *ngIf="form.get('nombre').status != 'VALID' && form.get('nombre').touched">Campo Obligatorio</span>
+                </div>
+                <div class="form-group">
+                    <label form="Autor">Autor *</label>
+                    <input type="text" id="Autor" class="form-control" formControlName="Autor" placeholder="Autor"/>
+                    <span class="text-center text-danger" *ngIf="form.get('Autor').status != 'VALID' && form.get('Autor').touched">Campo Obligatorio</span>
+                </div>
+                <div class="form-group">
+                    <label form="Paginas">Paginas *</label>
+                    <input type="text" id="Paginas" class="form-control" formControlName="Paginas" placeholder="Paginas"/>
+                    <span class="text-center text-danger" *ngIf="form.get('Paginas').status != 'VALID' && form.get('Paginas').touched">Campo Obligatorio</span>
+                </div>
+                <div class="form-group">
+                    <label form="Prologo">Prologo *</label>
+                    <input type="text" id="Prologo" class="form-control" formControlName="Prologo" placeholder="Prologo"/>
+                    <span class="text-center text-danger" *ngIf="form.get('Prologo').status != 'VALID' && form.get('Prologo').touched">Campo Obligatorio</span>
+                </div>
+                <div class="form-group">
+                    <label form="Editorial">Editorial *</label>
+                    <input type="text" id="Editorial" class="form-control" formControlName="Editorial" placeholder="Editorial"/>
+                    <span class="text-center text-danger" *ngIf="form.get('Editorial').status != 'VALID' && form.get('Editorial').touched">Campo Obligatorio</span>
+                </div>
+                <div class="form-group">
+                    <label form="Idioma">Idioma *</label>
+                    <input type="text" id="Idioma" class="form-control" formControlName="Idioma" placeholder="Idioma"/>
+                    <span class="text-center text-danger" *ngIf="form.get('Idioma').status != 'VALID' && form.get('Idioma').touched">Campo Obligatorio</span>
+                </div>
+                <div class="form-group">
+                    <label form="Fecha_Publicacion">Fecha de Publicacion *</label>
+                    <input type="text" id="Fecha_Publicacion" class="form-control" formControlName="Fecha_Publicacion" placeholder="Año"/>
+                    <span class="text-center text-danger" *ngIf="form.get('Fecha_Publicacion').status != 'VALID' && form.get('Fecha_Publicacion').touched">Campo Obligatorio</span>
+                </div>
+                <div class="form-group">
+                    <label form="Precio">Precio *</label>
+                    <input type="number" id="Precio" class="form-control" formControlName="Precio" placeholder="$$$"/>
+                    <span class="text-center text-danger" *ngIf="form.get('Precio').status != 'VALID' && form.get('Precio').touched">Campo Obligatorio</span>
+                </div>
+                <div class="form-group">
+                    <label form="foto">Foto *</label>
+                    <input type="file" id="foto" formControlName="foto" class="form-control" (change)="onFileSelected($event)"/>
+                </div>
+                <!-- llamo al previewUrl para ver que esta subiendo el usuario con el if(si es que hay algo)-->
+                <div class="col-3" *ngIf="previewUrl">
+                    <img [src]="previewUrl" style="width: 250px; height: auto;">
+                </div>
+                <button type="button"(click)="SubirImg()" [disabled]="form.invalid" class="btn btn-primary btn-block mb-5">Subir libro</button>
+            </form>
+        </div>
+    </div>
+</div>
