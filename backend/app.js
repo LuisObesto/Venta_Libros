@@ -45,7 +45,6 @@ const secured = (req,res,next) =>{
     let decoded = jwt.verify(token,publicKey)
     req.id_permiso = decoded.id_permiso
     req.role = decoded.role;
-    console.log(`El token recibido es: ${token}`);
     req.id_permiso == 10 ? next() : res.status(401).json({status : true, message : 'unauthorized',value : req.role})
     
 
