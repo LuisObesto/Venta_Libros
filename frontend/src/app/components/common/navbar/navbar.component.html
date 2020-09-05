@@ -9,8 +9,7 @@
         <a class="nav-link text-white" [href]="ruta.link">{{ruta.description}}</a>
       </li>
 
-
-      <div class="dropdown" *ngIf="salir()">
+      <div class="dropdown float-right" *ngIf="salir()">
         <button class="btn btn-secondary dropdown-toggle botonopc color" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Mi Perfil
         </button>
@@ -23,8 +22,13 @@
           <a class="dropdown-item borderop glow color" type="button" (click)="logout()">Cerrar sesión</a>
         </div>
       </div>
-
-
+    
+      <div>
+        <a routerLink="/carrito">
+          <button class="botcar botonopc color"><img src="../../../../assets/img/sp.png"/></button>
+        </a>
+      </div>
+      
     </ul>
   </div>
 </nav>

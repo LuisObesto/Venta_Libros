@@ -14,12 +14,16 @@ export class CarritoComponent implements OnInit {
 
   ngOnInit(){
     this.ObtenerCarrito()
-
+    this.ObtenerTotal()
   }
   ObtenerCarrito(){
     let bla = sessionStorage.getItem('Libros')
     let valor = JSON.parse(bla)
     console.log(valor)
     this.items = valor
+  }
+
+  ObtenerTotal(){
+    console.log(this.items.precio)
   }
 }
