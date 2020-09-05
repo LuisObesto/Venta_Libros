@@ -1,0 +1,53 @@
+.color{
+    background-color: #2C2C2C;
+    color: white;
+}
+
+
+.botonopc{
+    margin-top: 3.5px;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+}
+
+.borderad{
+    border-radius: 10px;
+    opacity: 0.85;
+}
+
+.ex1 {
+    padding-bottom: 25px;
+    padding-left: 24px;
+    padding-right: 50px;
+    line-height: 20%;
+}
+
+
+.borderop{
+    border-top: 1px solid #676767;
+    padding-bottom: 5px;
+}
+
+a.glow:hover
+{
+    background-color: #414141;
+    transition: 0.5s;
+}
+
+.botcar {
+    width: 30px;
+    height: 30px;
+}
+
+.botcar img {
+    width: 100%;
+    height: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }

@@ -1,17 +1,10 @@
 
 <div *ngFor="let item of items">
-  <div class="row">
-      <div class="col-4" >
-        <h5>Libro</h5>
-        <img src="./../../../assets/img/{{item.img}}" style="width: 20%; height: auto;" alt=" ">
-      </div>
-
-        <div class="col-4">
-          <div >
-            <h4>{{item.nombre}}</h4>
-            <h4>${{item.precio}}</h4>
-          </div>
-
-        </div>
-  </div>
+  <table style="width: 100%">
+    <tr class="color">
+      <img src="./../../../assets/img/{{item.img}}" style="width: 100px; height: 160px;" alt=" ">
+      <td style="width: 100px">{{item.nombre}}</td>
+      <td style="width: 100px">${{item.precio}}</td>
+    </tr>
+  </table>
 </div>
