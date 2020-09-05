@@ -1,5 +1,17 @@
-<h1>Items</h1>
-<!--<div ng-repeat="value in items">-->
-<!--&lt;!&ndash;    <span>{{ value }}</span>&ndash;&gt;-->
-<!--    &lt;!&ndash; <span>{{ item.Precio| currency }}</span> &ndash;&gt;-->
-<!--  </div>-->
+<<<<<<< HEAD
+<div *ngFor="let item of items">
+  <div class="row">
+      <div class="col-4" >
+        <h5>Libro</h5>
+        <img src="./../../../assets/img/{{item.img}}" style="width: 20%; height: auto;" alt=" ">
+      </div>
+
+        <div class="col-4">
+          <div >
+            <h4>{{item.nombre}}</h4>
+            <h4>${{item.precio}}</h4> 
+          </div>
+      
+        </div>
+  </div>  
+</div>

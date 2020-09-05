@@ -5,12 +5,17 @@ import { Injectable } from '@angular/core';
 })
 export class CarritoService {
 
-  items = [{}];
+  items =[]
 
-  addToCart(arr) {
-    this.items.push(arr)
+  addToCart(nombre,precio,img) {
+    let obj = {
+      nombre : nombre,
+      precio : precio,
+      img : img
+    }
+    this.items.push(obj)
     let valor = JSON.stringify(this.items)
-    console.log(arr)
+    console.log(this.items)
     sessionStorage.setItem('Libros',valor)
     console.log(this.items)
     return this.items

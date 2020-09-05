@@ -22,7 +22,6 @@ export class IndexComponent implements OnInit {
   async getAllLibros(){
 
     let result : any = await this.librosServiceBack.getLibros();
-
     this.libros = result.libros
   }
 
