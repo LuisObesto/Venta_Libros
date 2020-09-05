@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class CarritoService {
 
-  items =[]
+  items = []
 
   addToCart(nombre,precio,img) {
     let obj = {
@@ -13,13 +13,17 @@ export class CarritoService {
       precio : precio,
       img : img
     }
+    if(sessionStorage.Libros)
+    {
+      this.items = JSON.parse(sessionStorage.getItem('Libros'));
+    }else{
+      this.items = [];
+    }
     this.items.push(obj)
-    let valor = JSON.stringify(this.items)
-    console.log(this.items)
-    sessionStorage.setItem('Libros',valor)
-    console.log(this.items)
+    const valor = JSON.stringify(this.items)
+    sessionStorage.setItem('Libros', valor)
     return this.items
-    
+
   }
 
 

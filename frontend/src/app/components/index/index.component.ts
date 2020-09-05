@@ -17,6 +17,7 @@ export class IndexComponent implements OnInit {
   async ngOnInit(){
 
     this.getAllLibros()
+    // sessionStorage.getItem('Libros');
   }
 
   async getAllLibros(){
