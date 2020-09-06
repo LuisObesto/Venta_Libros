@@ -1,17 +1,39 @@
+<div class="ml-4 mt-3 mb-3">
 
-<table *ngFor="let item of items" style="width: 100%">
+  <div *ngFor="let item of items">
 
-    <tr class="color">
-      <td style="width: 80px"><img src="./../../../assets/img/{{item.img}}" style="width: 100px; height: 160px;" alt=" "></td>
-      <td style="width: 30%">{{item.nombre}}</td>
-      <td style="width: 30%">{{item.cantidad}}</td>
-      <td style="width: 30%">${{item.precio}}</td>
-      <td style="width: 30%"><button class="color botonopc table" (click)="DeleteItem(item.id)">Borrar</button></td>
-    </tr>
+    <div class="wakemeup sparala color row mr-5">
+      <img class="sparala ml-5" src="./../../../assets/img/{{item.img}}" style="width: 100px; height: 160px;" alt=" ">
 
-</table>
+      <div class="color spatore col" >
+        <h4>{{item.nombre}}</h4>
+      </div>
 
-<div class="color">
-  <p>Precio total: ${{total}}</p>
-  <button>Comprar</button>
+      <div class="color spatore col">
+        <h4>{{item.cantidad}}</h4>
+      </div>
+
+      <div class="color spatore col">
+        <h4>${{item.precio}}</h4>
+      </div>
+
+      <div class="elements spatore col">
+        <button class="color elements" (click)="DeleteItem(item.id)">Borrar</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="wakemeup color row mr-5">
+
+    <div class="wakemeup col sid">
+      <h4 class="sid">Precio total: ${{total}}</h4>
+    </div>
+
+    <div class="col">
+      <button class="meier">Comprar</button>
+    </div>
+  </div>
 </div>
+
+
