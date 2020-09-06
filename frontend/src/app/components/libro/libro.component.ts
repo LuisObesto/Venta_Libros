@@ -41,11 +41,12 @@ export class LibroComponent implements OnInit {
     }
   }
   AgregarCarrito(){
-    let img = this.libro.img
+    let id = this.id_libro
+    let cantidad = this.contador
     let nombre = this.libro.nombre
-    let precio = this.libro.Precio
+    let precio = this.libro.Precio * cantidad
+    let img = this.libro.img
 
-    let arr = [nombre,precio,img]
-    this.carritoService.addToCart(nombre,precio,img)
+    this.carritoService.addToCart(id,nombre,precio,img,cantidad)
   }
 }
