@@ -27,7 +27,6 @@ export class CarritoComponent implements OnInit {
     for(let i = 0;i < this.items.length;i++){
 
         this.total = this.total + this.items[i].precio
-        //total
     }
   }
 }
