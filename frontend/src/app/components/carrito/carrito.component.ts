@@ -11,15 +11,22 @@ export class CarritoComponent implements OnInit {
   constructor(private carritoService : CarritoService) { }
 
   items : any
-
+  total =0
   ngOnInit(){
     this.ObtenerCarrito()
-
+    this.ObtenerTotal()
   }
   ObtenerCarrito(){
     let bla = sessionStorage.getItem('Libros')
     let valor = JSON.parse(bla)
     console.log(valor)
     this.items = valor
+  }
+
+  ObtenerTotal(){
+    for(let i = 0;i < this.items.length;i++){
+
+        this.total = this.total + this.items[i].precio
+    }
   }
 }
