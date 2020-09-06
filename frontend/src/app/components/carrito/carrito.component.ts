@@ -44,13 +44,4 @@ export class CarritoComponent implements OnInit {
         this.total = this.total + this.items[i].precio
     }
   }
-
-  DeleteItem(id) {
-    for(let i = 0;i < this.items.length;i++){
-      if(id == this.items[i].id){
-        this.items[i] = null;
-      }
-    }
-    return this.items;
-  }
 }
