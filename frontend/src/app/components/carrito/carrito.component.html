@@ -6,9 +6,12 @@
       <td style="width: 30%">{{item.nombre}}</td>
       <td style="width: 30%">{{item.cantidad}}</td>
       <td style="width: 30%">${{item.precio}}</td>
-      <td style="width: 30%"><button class="color botonopc table">Borrar</button></td>
+      <td style="width: 30%"><button class="color botonopc table" (click)="DeleteItem(item.id)">Borrar</button></td>
     </tr>
 
 </table>
 
-<p class="color">${{total}}</p>
+<div class="color">
+  <p>Precio total: ${{total}}</p>
+  <button>Comprar</button>
+</div>

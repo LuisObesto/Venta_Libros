@@ -24,7 +24,7 @@ export class CarritoService {
 
     if(this.items.length > 0){
       for(let i = 0;i < this.items.length;i++){
-        if(this.items[i].nombre == nombre){
+        if(this.items[i].id == id){
           this.items[i].cantidad = this.items[i].cantidad + cantidad
           this.items[i].precio = this.items[i].precio + precio
           const valor = JSON.stringify(this.items)
@@ -39,11 +39,5 @@ export class CarritoService {
     const valor = JSON.stringify(this.items)
     sessionStorage.setItem('Libros', valor)
     return this.items
-  }
-
-
-  clearCart() {
-    this.items = [];
-    return this.items;
   }
 }
