@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LibrosService } from 'src/app/services/backend/libros.service';
 import { CarritoService } from 'src/app/services/carrito.service';
+import { SwalService } from 'src/app/services/common/swal.service';
 
 @Component({
   selector: 'app-libro',
@@ -16,7 +17,8 @@ export class LibroComponent implements OnInit {
 
   constructor(private activatedRoute : ActivatedRoute,
               private librosServiceBack : LibrosService,
-              private carritoService : CarritoService) { }
+              private carritoService : CarritoService,
+              private swalService : SwalService) { }
 
   async ngOnInit(){
 
@@ -48,5 +50,6 @@ export class LibroComponent implements OnInit {
     let img = this.libro.img
 
     this.carritoService.addToCart(id,nombre,precio,img,cantidad)
+    this.swalService.normalMessage({icon : 'success', html : 'Agregado al carrito'})
   }
 }

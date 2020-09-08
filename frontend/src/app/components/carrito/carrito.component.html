@@ -24,7 +24,7 @@
 
   </div>
 
-  <div class="wakemeup color row mr-5">
+  <div class="wakemeup color row mr-5" *ngIf="BotonComprar()">
 
     <div class="wakemeup col sid">
       <h4 class="sid">Precio total: ${{total}}</h4>
@@ -36,4 +36,4 @@
   </div>
 </div>
 
-
+<h1 *ngIf="BotonComprar() == false" style="text-align: center; color: gray; margin-top: 4rem;">Tu carrito esta vacio </h1>

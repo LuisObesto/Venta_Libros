@@ -18,9 +18,8 @@ export class CarritoComponent implements OnInit {
     this.ObtenerTotal()
   }
   ObtenerCarrito(){
-    let bla = sessionStorage.getItem('Libros')
-    let valor = JSON.parse(bla)
-    console.log(valor)
+    let sessionSave = sessionStorage.getItem('Libros')
+    let valor = JSON.parse(sessionSave)
     this.items = valor
   }
   DeleteItem(id) {
@@ -43,5 +42,12 @@ export class CarritoComponent implements OnInit {
 
         this.total = this.total + this.items[i].precio
     }
+  }
+
+  BotonComprar(){
+    if(this.total > 0){
+      return true
+    }
+      return false
   }
 }

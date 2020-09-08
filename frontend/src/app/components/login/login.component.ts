@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     contraseña : new FormControl ('',[Validators.required])
   }
 
-  constructor(private authService : AuthService,private router : Router, private swalService : SwalService) { }
+  constructor(private authService : AuthService, private swalService : SwalService) { }
 
   ngOnInit() {
 

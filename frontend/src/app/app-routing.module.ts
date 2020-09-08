@@ -9,11 +9,11 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 const routes: Routes = [
 
   {path : 'create-edit/libro/new',canActivate : [AuthGuard], loadChildren : () => import('./components/libros-new/libros-new.module').then(m=>m.LibrosNewModule)},
-  {path : 'libro/:id', component : LibroComponent},
-  {path : 'index',component : IndexComponent},
+  {path : 'libro/:id', loadChildren : ()=>import('./components/libro/libro.module').then(m=>m.LibroModule)},
+  {path : 'index',loadChildren : ()=>import('./components/index/index.module').then(m=>m.IndexModule)},
   {path : 'login',loadChildren : ()=>import ('./components/login/login.module').then(m=> m.LoginModule)},
   {path : 'registro', loadChildren : ()=>import ('./components/registro/registro.module').then(m=> m.RegistroModule)},
-  {path : 'carrito',component : CarritoComponent},
+  {path : 'carrito',loadChildren : ()=>import('./components/carrito/carrito.module').then(m=>m.CarritoModule)},
   {path : '**', redirectTo : 'index'}
 ];
 

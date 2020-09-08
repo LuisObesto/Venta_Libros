@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { LibrosService } from 'src/app/services/backend/libros.service';
-import { CarritoService } from 'src/app/services/carrito.service';
 
 @Component({
   selector: 'app-index',
@@ -11,8 +10,7 @@ export class IndexComponent implements OnInit {
 
   libros : any=[]
 
-  constructor(private  librosServiceBack : LibrosService,
-              private carritoService : CarritoService) { }
+  constructor(private  librosServiceBack : LibrosService) { }
 
   async ngOnInit(){
 
