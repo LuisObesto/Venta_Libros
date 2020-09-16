@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"practica.libros"}],"uuid":"f5642651d2da4a0ea227b090f18ef354"}
